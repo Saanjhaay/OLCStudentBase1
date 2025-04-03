@@ -1,11 +1,11 @@
 
 # Practice on how to split strings based on delimiter
 # s = "Aisha;Benny;Chloe;David;Eva"
+# currentpos = 0
 # delimiter = ";"
-# currentpos = 0 
-# parts = [] 
+# parts = []
 # while True:
-#     delim_start = s.find(";",currentpos)
+#     delim_start = s.find(delimiter ,currentpos)
 #     if delim_start == -1: 
 #         word = s[currentpos:]
 #         parts.append(word)
@@ -29,27 +29,27 @@
 #  "with technology playing a crucial role in every aspect of our lives"
 #  ...]
 
-s = "The modern world has become highly interconnected,with technology playing a crucial role in every aspect of our lives,from communication and healthcare to finance and education. People rely on digital tools for their daily tasks,making it essential to understand how to secure personal information and ensure data privacy. With the rise of social media,the sharing of information has become instantaneous,bringing both opportunities and challenges. Cybersecurity threats are on the rise,requiring individuals and organizations to take precautions against potential hacks,data breaches,and identity theft."
+# s = "The modern world has become highly interconnected,with technology playing a crucial role in every aspect of our lives,from communication and healthcare to finance and education. People rely on digital tools for their daily tasks,making it essential to understand how to secure personal information and ensure data privacy. With the rise of social media,the sharing of information has become instantaneous,bringing both opportunities and challenges. Cybersecurity threats are on the rise,requiring individuals and organizations to take precautions against potential hacks,data breaches,and identity theft."
 
 
-# write your code here
-currentpos = 0
-delimiter = "," 
-whole_sentence = []
-while True:
-    delim_start = s.find(",",currentpos)
-    if delim_start == -1:
-        sentence = s[currentpos:]
-        whole_sentence.append(sentence)
-        break
-    sentence = s[currentpos:delim_start]
-    whole_sentence.append(sentence)
-    currentpos =   delim_start + len(",")
+# # write your code here
+# currentpos = 0
+# delimiter = "," 
+# whole_sentence = []
+# while True:
+#     delim_start = s.find(",",currentpos)
+#     if delim_start == -1:
+#         sentence = s[currentpos:]
+#         whole_sentence.append(sentence)
+#         break
+#     sentence = s[currentpos:delim_start]
+#     whole_sentence.append(sentence)
+#     currentpos =   delim_start + len(",")
 
-print(whole_sentence)
+# print(whole_sentence)
 
 
-######################################################
+# ######################################################
 
 # Scenario 2: Extracting URLs from a Web Log
 # You are a web analyst at a large company handling 
@@ -58,11 +58,24 @@ print(whole_sentence)
 
 # expected output
 # ['https://shopnow.com', 'https://newsdaily.com', 'https://techinsider.org', ... ]
-weblogs = "https://shopnow.com,https://newsdaily.com,https://techinsider.org,https://myblog.net,https://travelhub.io,https://educonnect.edu,https://cryptoexchange.com,https://gamingworld.gg,https://sportsupdates.tv,https://moviemagic.net,https://musicstream.fm,https://fitnessclub.org,https://foodiesdelight.com,https://financeguru.biz,https://shoppinghub.co,https://bookreviews.xyz,https://jobportal.jobs,https://weatherwatcher.gov,https://luxuryhomes.realestate,https://carenthusiast.auto"
+# weblogs = "https://shopnow.com,https://newsdaily.com,https://techinsider.org,https://myblog.net,https://travelhub.io,https://educonnect.edu,https://cryptoexchange.com,https://gamingworld.gg,https://sportsupdates.tv,https://moviemagic.net,https://musicstream.fm,https://fitnessclub.org,https://foodiesdelight.com,https://financeguru.biz,https://shoppinghub.co,https://bookreviews.xyz,https://jobportal.jobs,https://weatherwatcher.gov,https://luxuryhomes.realestate,https://carenthusiast.auto"
 
 
-# write your code here
+# # write your code here
+# delimiter = ","
+# currentpos = 0
+# codes = []
+# while True:
+#     delim_start = weblogs.find(delimiter,currentpos)
+#     if delim_start == -1:
+#         code = weblogs[currentpos:]
+#         codes.append(code)
+#         break
+#     code = weblogs[currentpos:delim_start]
+#     codes.append(code)
+#     currentpos =   delim_start + len(",")
 
+# print(codes)
 
 
 
@@ -84,7 +97,20 @@ weblogs = "https://shopnow.com,https://newsdaily.com,https://techinsider.org,htt
 product_data = "1001///1023///1500///2034///3102///4025///5011///6098///7103///8020"
 
 # write your code here
+delimiter = "///"
+currentpos = 0
+IDs=[]
+while True:
+    delim_start = product_data.find(delimiter,currentpos)
+    if delim_start == -1:
+        ID = product_data[currentpos:]
+        IDs.append(ID)
+        break
+    ID = product_data[currentpos:delim_start]
+    IDs.append(ID)
+    currentpos =   delim_start + len(delimiter)
 
+print(IDs)
 
 
 
